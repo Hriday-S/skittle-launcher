@@ -122,7 +122,7 @@
     </div>
 </div>
 <div class="jumbotron text-left" style="padding-left:20px">
-    <h2>Version 0.1 (4/11/23)</h2>
+    <h2>Version 0.1 (4/11/23-4/13/23)</h2>
 </div>
     <div class="container">
         <div class = "row">
@@ -130,6 +130,8 @@
                 <h2>Concept</h2>
                 <p>Before CV is implemented to automatically launch candy at targets, the launching system should be perfected. To do this, the first thing needed is to design a servo horn that can knock the candy out. Relying on friction to hold the candy it is not ideal as it is unrealiable and does not give precision with the release angle. Through mutliple iterations, a design was reached.</p>
                 <p>Additionally, the encoders were implemented to increase the accuracy of the launch angle. Please read more about this in <a href = "programming.html">programming section</a></p>
+                <img src = "images/prototyping/servo-mounts.jpg">
+                <caption>Iterations on servo mount</caption>
             </div>  
             <div class = "col-sm-4 text-center">
                 <h2>Materials</h2>
@@ -146,6 +148,68 @@
                 <iframe src="https://www.youtube.com/embed/WA8JgAD_vOk" title="Version 0- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
                 <p>In the video, a program runs the motor for 5s and stops it quickly using hard braking.</p>
             </div>
+        </div>
+</div>  
+<div class="jumbotron text-left" style="padding-left:20px">
+    <h2>Version 1 (4/14/23-4/18/23)</h2>
+</div>
+    <div class="container">
+        <div class = "row">
+            <div class="col-sm-5">
+                <h2>Concept</h2>
+                <p>In this version, the skittles are accurately launched autonomously using computer vision to detect people.</p>
+                <p>The following changes were made to the previous version</p>
+                <ul>
+                    <li>Servo horn made to attach to standard SG-90 horn due to fitting difficulties</li>
+                    <li>Suction cups added to base to prevent wobbling</li>
+                    <li>Decreased width in the arm to increase responsivity of launch (less area to travel for a launch)</li>
+                    <li>Switch from PLA to mostly PC/PETG to increase rigidity and strength</li>
+                    <li>Program incorporates CV, integrates servo movement with the DC motor</li>
+                </ul>
+            
+            </div>  
+            <div class = "col-sm-4 text-center">
+                <h2>Materials</h2>
+                <ul class = "text-left">
+                    <li> Eletrical Components
+                        <ul>
+                            <li>L298N Motor Driver</li>
+                            <li>12V DC Motor (Encoder)</li>
+                            <li>Servo (Tower Pro)</li>
+                            <li>Slip Ring</li>
+                            <li>Raspberry Pi</li>
+                        </ul>
+                    </li>
+                    <li> Physical Components
+                        <ul>
+                            <li>Arm (PC)</li>
+                            <li>Slip Ring Mount (PC)</li>
+                            <li>Candy Holder (PLA+)</li>
+                            <li>Base (PETG)</li>
+                            <li>Suction Cups</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class = "col-sm-2">
+                <iframe src="https://www.youtube.com/embed/WA8JgAD_vOk" title="Version 0- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+                <p>Version 1 Video</p>
+            </div>
+        </div>
+        <div class = "row">
+            
+            <div class = "col-sm-4 text-center">
+                <h2>Issues</h2>
+                <ul class = "text-left">
+                   <li>Although most launches were at an angle with acceptable accuracy, some were not. This is due to the following
+                    <ul>
+                        <li>Lack of read</li>
+                    </ul>
+                   </li>
+                </ul>
+            
+            </div>
+           
         </div>
 </div>  
 </body>
