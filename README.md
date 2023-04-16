@@ -1,1 +1,1 @@
-# skittle-launcher
+# CandyLauncher

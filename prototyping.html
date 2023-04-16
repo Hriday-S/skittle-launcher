@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Candy Launcher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Skittle Launcher</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Resarch</a></li>
+        <li><a href="physics.html">Physics Proof</a></li>
+        <li class="active"><a href="prototyping.html">Prototyping</a></li>
+        <li><a href="programming.html">Programming</a></li>
+      </ul> 
+    </div>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1>Prototyping</h1>
+</div>
+<div class="jumbotron text-left" style="padding-left:20px">
+    <h2>Preliminary Draft (4/1/23 - 4/7/23)</h2>
+</div>  
+<div class="container">
+    <div class = "row">
+        <div class="col-sm-5">
+            <h2>Concept</h2>
+            <p>To start off, I created a simplistic design, consisting of a base, and an arm. The base would contain the motor, while the arm would contain the candy. A servo hole was created in the arm but was not used<p>
+            <p>The design was created in tinkercad and was printed in green PLA @ 20% infill</p>
+            <p>And yes, I did hand drill the holes since I forgot to cad them in</p>
+        </div>  
+        <div class = "col-sm-4 text-center">
+            <h2>Materials</h2>
+            <ul class = "text-left">
+                <li>Power Supply</li>
+                <li>Base</li>
+                <li>Arm</li>
+                <li>12V DC Motor with Encoder</li>
+                <li>Hriday</li>
+            </ul>
+        </div>
+        <div class = "col-sm-2">
+            <iframe src="https://www.youtube.com/embed/urB2m5G8hjw" title="Preliminary Draft- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-sm-5">
+            <h2>Issues</h2>
+            <ul>
+                <li><p>The obvious issue here is that the mechanism tips over, far from the maximum speed needed of the motor. This is because the base is not wide enough. This is easily addressable by making the base wider. Seems that all the FRC kids at this school can't get this right.</p></li>
+                <li><p>The motor-hole was very loose and can be made tighter</p></li>
+
+            </ul>
+        </div>  
+        <div class = "col-sm-4 text-center">
+            <img style = "max-width:100%" src = "images/prototyping/preliminary-draft-base.png">
+            <caption>Base</caption>
+        </div>
+    </div>
+</div>
+<div class="jumbotron text-left" style="padding-left:20px">
+    <h2>Version 0 (4/8/2023-4/10/2023)</h2>
+</div>  
+<div class="container">
+    <div class = "row">
+        <div class="col-sm-5">
+            <h2>Concept</h2>
+            <p>To address the issue of the mechanism tipping over, the base was significantly widened.</p>
+            <p>It was also at this point I realized that I needed a slip ring. The servo wires would need a mechanism to be able to rotate since they are on a rotating mechanism that goes past 360 degrees. To do this, I designed a slip ring mount that attaches to the base.</p>
+            <p>The design was created in tinkercad and was printed in grey PLA @ 20% infill</p>
+        </div>  
+        <div class = "col-sm-4 text-center">
+            <h2>Materials</h2>
+            <ul class = "text-left">
+                <li>Power Supply</li>
+                <li>Base</li>
+                <li>Arm</li>
+                <li>12V DC Motor with Encoder</li>
+                <li>Slip Ring</li>
+                <li>Hriday</li>
+            </ul>
+        </div>
+        <div class = "col-sm-2">
+            <iframe src="https://www.youtube.com/embed/WA8JgAD_vOk" title="Version 0- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+            <p>In the video, a program runs the motor for 5s and stops it quickly using hard braking.</p>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-sm-4">
+            <h2>Issues</h2>
+            <ul>
+                <li><p>Although the mechanism does not tip over anymore, it still moves around. This is not ideal for something that will sit on a table (in most scenarios).</p></li>
+                <li><p>The slip ring mount is not the strongest, and can break eventually. This should be printed out of PETG, ABS, or PC in the future.</p></li>
+                <li><p>This time too, I did not put holes on the CAD (for the slip ring holder) This is because I was still deciding which slip ring to buy. The generic $10 slip rings can handle 300 rpm, but the ~$50 slip rings can handle 1000 rpm. This is an important factor since the device should be able to launch a candy with some speed.</p></o></li>
+            </ul>
+        </div>  
+        <div class = "col-sm-4 text-center">
+            <img style = "max-width:100%" src = "images/prototyping/basev0.jpg">
+            <caption>Base</caption>
+        </div>
+        <div class = "col-sm-4 text-center">
+            <img src = "images/prototyping/slip-ring-holder.jpg">
+            <caption>Slip Ring Mount</caption>
+        </div>
+    </div>
+</div>
+<div class="jumbotron text-left" style="padding-left:20px">
+    <h2>Version 0.1 (4/11/23)</h2>
+</div>
+    <div class="container">
+        <div class = "row">
+            <div class="col-sm-5">
+                <h2>Concept</h2>
+                <p>Before CV is implemented to automatically launch candy at targets, the launching system should be perfected. To do this, the first thing needed is to design a servo horn that can knock the candy out. Relying on friction to hold the candy it is not ideal as it is unrealiable and does not give precision with the release angle. Through mutliple iterations, a design was reached.</p>
+                <p>Additionally, the encoders were implemented to increase the accuracy of the launch angle. Please read more about this in <a href = "programming.html">programming section</a></p>
+            </div>  
+            <div class = "col-sm-4 text-center">
+                <h2>Materials</h2>
+                <ul class = "text-left">
+                    <li>Power Supply</li>
+                    <li>Base</li>
+                    <li>Arm</li>
+                    <li>12V DC Motor with Encoder</li>
+                    <li>Slip Ring</li>
+                    <li>Hriday</li>
+                </ul>
+            </div>
+            <div class = "col-sm-2">
+                <iframe src="https://www.youtube.com/embed/WA8JgAD_vOk" title="Version 0- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+                <p>In the video, a program runs the motor for 5s and stops it quickly using hard braking.</p>
+            </div>
+        </div>
+</div>  
+</body>
+</html>

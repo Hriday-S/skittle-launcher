@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Candy Launcher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Skittle Launcher</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Resarch</a></li>
+        <li class="active"><a href="physics.html">Physics Proof</a></li>
+        <li><a href="prototyping.html">Prototyping</a></li>
+        <li><a href="programming.html">Programming</a></li>
+      </ul> 
+    </div>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1>Physics Proof</h1>
+</div>
+<div class="container">
+    <div class = "row">
+        <div class="col-sm-6">
+            <h2>Centripetal Motion</h2>
+            <p>Centripetal motion refers to an object that is moving in a circular path. Although the object is always changing direction,  its speed is constant. The centripetal force is the force that acts towards the center of the circular path.<p>
+            <p>If the force towards the center is removed, the object will move in a straight line, tangential to its previous orbit</p>
+            <p>Using this principle, we can launch an object. If the motor is providing the centripetal force, stopping the motor will cause the projectile in it to be released</p>
+        </div>  
+        <div style = "border-style:dashed" class = "col-sm-6 text-center">
+            <img style = "max-width:100%" src = "images/centripetalProof.png">
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-sm-6">
+            <h2>Distance Traveled</h2>
+            <p>The original version has no angle to the arm to simplify the programming. Therfore, the following calculations can be used to determine the distance a candy can theoretically be launched. We will use 300 rpm to see if the $10 slip ring will suffice or if a 800-100 rpm slip ring will be needed. A 14 cm arm was decided to be the maximum since any larger would be hard to 3d print.</p>
+            <br>
+            <h4>Launch Velocity</h4>
+            <p>5 rev/s = 10π rad/s
+                <br>v<sub>t</sub> = ωr
+                <br>v<sub>t</sub> = (10π rad/s)(14cm) 
+                <br>v<sub>t</sub> = 140cm/s = 1.48m/s
+            </p>
+            <h4>Distance Travelled</h4>
+            <h5>X axis</h6>
+            <p>
+                v<sub>i</sub> = 1.48m/s <br>
+                v<sub>f</sub> = 1.48m/s <br>
+                a = 0 <br>
+                Δx = ? <br>
+                t = ? <br><br>
+                t = √(2h/g)<br>
+                t = sqrt(0.2)<br>
+                t = 0.45s<br><br>
+                Δx = v<sub>i</sub>t + 1/2 at<sup>2</sup><br>
+                Δx = (1.48 m/s)(0.45s)<br>
+                Δx = 0.66<br><br>
+                Therefore, we can expect the skittle to land at the ground about 0.66 meter from the launcher. The motor is capable of going 600 rpm, so we can technically just push the slip ring past its max slightly. This would put a conservative limit on the distance at 0.8m. We can use this value when doing the computer vision to decide whether or not its worth launching candy at an individual. Also note - the distance is before it hits the floor, we would like it to reach the person at a hight higher than the floor.
+
+            </p>
+            
+        </div>  
+        <div style = "border-style:dashed" class = "col-sm-6 text-center">
+            <img style = "max-width:100%" src = "images/physics/diagram.jpg">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
