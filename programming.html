@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <title>Candy Launcher</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +14,6 @@
 <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Skittle Launcher</a>
-    </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
@@ -43,19 +36,11 @@
             <p>The program uses computer vision library of Python to detect people. Distance, angle, and identity are identified. Once this is done, the main motor starts running, and stops at the angle that will enable the candy to be launched at the person. 
         </div>  
         <div class = "col-sm-4 text-center">
-            <h2>Materials</h2>
-            <ul class = "text-left">
-                <li>Power Supply</li>
-                <li>Base</li>
-                <li>Arm</li>
-                <li>12V DC Motor with Encoder</li>
-                <li>Slip Ring</li>
-                <li>Hriday</li>
-            </ul>
+            <h2><a href = "code/version1.py">Version 1 Code</a></h2>
         </div>
         <div class = "col-sm-4">
-            <iframe src="https://www.youtube.com/embed/WA8JgAD_vOk" title="Version 0- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
-            <p>In the video, a program runs the motor for 5s and stops it quickly using hard braking.</p>
+            <iframe src="https://www.youtube.com/embed/8VnXftiHvKQ" title="Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             <p>Version 1 video</p>
         </div>
     </div>
 </div>
@@ -72,11 +57,9 @@
         <div class = "col-sm-6 text-center">
             <h2>Difficulties</h2>
             <ul class = "text-left">
-                <li>Since the Raspberry Pi's are primarily Linux computers, their read rate is not great. Switching the interrupt-based structure to a main-loop based structure made the calculations mostly accurate, with a few missed ticks, that are insiginificant currently, until an automatic reload system is implememted in which multiple candies are launched (more revolutions, more error build-up). 
+                <li>Since the Raspberry Pi's are primarily Linux computers, their read rate is not great. This negatively impacted the accuracy of the values received.
                     <br><br>A decoding chip such as the LS7366R (one of the more simpler ones) can count several hundred thousand more ticks than a Raspberry Pi, but due to it taking a long amount of time to ship (3 weeks on average), it is currently not feasable. I plan to incorporate this in the future.
                     <br><br>The chip mentioned above uses SPI communication protocol to communicate with the Raspberry Pi, enabling high receive rates, significantly higher than the digital I/O pins can provide.</li>
-
-                
             </ul>
         </div>
         <div class = "col-sm-3">
@@ -89,8 +72,7 @@
             <p>To program the encoder reading, the encoder class of gpiozero was used. This class handles the initialization and reading of the values.</p>
         </div>
         <div class = "col-sm-6">
-            <h2><a href = "read.html" target="_blank">Read Code</a></h2>
-            
+            <h2><a href = "code/read-encoder.py">Read Code</a></h2>
             </h2>
         </div>
     </div>
@@ -106,26 +88,16 @@
         <div class = "col-sm-6 text-center">
             <h2>Purpose</h2>
             <ul class = "text-left"> 
-                <p>The purpose of using OpenCV is to recognize humans and return effectively a list of their coordinates. With this, the program can calculate the launch angle and whether or not the person is too far (using bounding boxes).</p>
-                    
-
-                
+                <p>The purpose of using OpenCV is to recognize humans and return effectively a list of their coordinates. With this, the program can calculate the launch angle and whether or not the person is too far (using bounding boxes).</p>  
             </ul>
         </div>
         <div class = "col-sm-3">
-            <iframe src="https://www.youtube.com/embed/EAMuxo39LJ8" title="Encoder values - skittle launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            <p>In the above video, the cummulative angle is printed to the console using the encoder.</p>
-        </div>
+            <iframe src="https://www.youtube.com/embed/hKH6QSrpT3Y" title="HOG Facial Detection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
     </div>
     <div class = "row">
         <div class = "col-sm-6">
-            <h2>Programming</h2>
-            <p>To program the encoder reading, the encoder class of gpiozero was used. This class handles the initialization and reading of the values.</p>
-        </div>
-        <div class = "col-sm-6">
-            <h2>Read Code</h2>
-            <code>
-                
-            </code>
+            <h2><a href = "code/hog-facial-detection.py">Code</a></h2>
+        
             </h2>
         </div>
     </div>

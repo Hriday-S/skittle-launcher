@@ -4,24 +4,20 @@
   <title>Candy Launcher</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- links to bootstrap, stylesheet, jquerry-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 </head>
 <body>
+<!-- Navbar dark bg, light text-->
 <nav class="navbar navbar-inverse">
+  <!--full width-->
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Skittle Launcher</a>
-    </div>
+    <!--Collapsible navbar-->
     <div class="collapse navbar-collapse" id="myNavbar">
+      <!--Navbar elements-->
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Resarch</a></li>
@@ -94,6 +90,8 @@
                 <li>Arm</li>
                 <li>12V DC Motor with Encoder</li>
                 <li>Slip Ring</li>
+                <li>L298N H-Bridge</li>
+                <li>Servo</li>
                 <li>Hriday</li>
             </ul>
         </div>
@@ -136,12 +134,23 @@
             <div class = "col-sm-4 text-center">
                 <h2>Materials</h2>
                 <ul class = "text-left">
-                    <li>Power Supply</li>
-                    <li>Base</li>
-                    <li>Arm</li>
-                    <li>12V DC Motor with Encoder</li>
-                    <li>Slip Ring</li>
-                    <li>Hriday</li>
+                    <li> Eletrical Components
+                        <ul>
+                            <li>L298N Motor Driver</li>
+                            <li>12V DC Motor (Encoder)</li>
+                            <li>Servo (Tower Pro SG90)</li>
+                            <li>Slip Ring</li>
+                            <li>Raspberry Pi 3B+</li>
+                        </ul>
+                    </li>
+                    <li> Physical Components
+                        <ul>
+                            <li>Arm (PLA)</li>
+                            <li>Slip Ring Mount (PLA)</li>
+                            <li>Candy Holder (PLA+)</li>
+                            <li>Base (PLA)</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class = "col-sm-2">
@@ -151,66 +160,93 @@
         </div>
 </div>  
 <div class="jumbotron text-left" style="padding-left:20px">
-    <h2>Version 1 (4/14/23-4/18/23)</h2>
+    <h2>Version 1 (4/14/23-4/16/23)</h2>
 </div>
-    <div class="container">
-        <div class = "row">
-            <div class="col-sm-5">
-                <h2>Concept</h2>
-                <p>In this version, the skittles are accurately launched autonomously using computer vision to detect people.</p>
-                <p>The following changes were made to the previous version</p>
-                <ul>
-                    <li>Servo horn made to attach to standard SG-90 horn due to fitting difficulties</li>
-                    <li>Suction cups added to base to prevent wobbling</li>
-                    <li>Decreased width in the arm to increase responsivity of launch (less area to travel for a launch)</li>
-                    <li>Switch from PLA to mostly PC/PETG to increase rigidity and strength</li>
-                    <li>Program incorporates CV, integrates servo movement with the DC motor</li>
-                </ul>
-            
-            </div>  
-            <div class = "col-sm-4 text-center">
-                <h2>Materials</h2>
-                <ul class = "text-left">
-                    <li> Eletrical Components
-                        <ul>
-                            <li>L298N Motor Driver</li>
-                            <li>12V DC Motor (Encoder)</li>
-                            <li>Servo (Tower Pro)</li>
-                            <li>Slip Ring</li>
-                            <li>Raspberry Pi</li>
-                        </ul>
-                    </li>
-                    <li> Physical Components
-                        <ul>
-                            <li>Arm (PC)</li>
-                            <li>Slip Ring Mount (PC)</li>
-                            <li>Candy Holder (PLA+)</li>
-                            <li>Base (PETG)</li>
-                            <li>Suction Cups</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class = "col-sm-2">
-                <iframe src="https://www.youtube.com/embed/WA8JgAD_vOk" title="Version 0- Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
-                <p>Version 1 Video</p>
-            </div>
-        </div>
-        <div class = "row">
-            
-            <div class = "col-sm-4 text-center">
-                <h2>Issues</h2>
-                <ul class = "text-left">
-                   <li>Although most launches were at an angle with acceptable accuracy, some were not. This is due to the following
+<div class="container">
+    <div class = "row">
+        <div class="col-sm-5">
+            <h2>Concept</h2>
+            <p>In this version, the skittles are accurately launched autonomously using computer vision to detect people.</p>
+            <p>The following changes were made to the previous version</p>
+            <ul>
+                <li>Servo horn made to attach to standard SG-90 horn due to fitting difficulties</li>
+                <li>Suction cups added to base to prevent wobbling</li>
+                <li>Decreased width in the arm to increase responsivity of launch (less area to travel for a launch)</li>
+                <li>Switch from PLA to mostly PC/PETG to increase rigidity and strength</li>
+                <li>Program incorporates CV, integrates servo movement with the DC motor</li>
+            </ul>
+        
+        </div>  
+        <div class = "col-sm-4 text-center">
+            <h2>Materials</h2>
+            <ul class = "text-left">
+                <li> Eletrical Components
                     <ul>
-                        <li>Lack of read</li>
+                        <li>L298N Motor Driver</li>
+                        <li>12V DC Motor (Encoder)</li>
+                        <li>Servo (Tower Pro SG90)</li>
+                        <li>Slip Ring</li>
+                        <li>Raspberry Pi 3B+</li>
                     </ul>
-                   </li>
-                </ul>
-            
-            </div>
-           
+                </li>
+                <li> Physical Components
+                    <ul>
+                        <li>Arm (PC)</li>
+                        <li>Slip Ring Mount (PC)</li>
+                        <li>Candy Holder (PLA+)</li>
+                        <li>Base (PETG)</li>
+                        <li>Suction Cups</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+        <div class = "col-sm-2">
+            <iframe src="https://www.youtube.com/embed/8VnXftiHvKQ" title="Skittle Launcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                <p>Version 1 Video</p>
+        </div>
+    </div>
+    <div class = "row">
+        
+        <div class = "col-sm-4 text-center">
+            <h2>Issues</h2>
+            <ul class = "text-left">
+                <li>Although most launches were at an angle with acceptable accuracy, some were not. This is due to the following
+                <ul>
+                    <li>Lack of read chip to take load of off Raspberry Pi for reading encoders</li>
+                    <li>The motion of the servo was not taken into consideration for the physics</li>
+                </ul>
+                </li>
+                <li>The camera is not always pointing exacly forward. This is because I did not print a mount for it to go to the slip ring holder and in the last minute had to tape it on. It is easily fixed in the next iteration.</li>
+            </ul>
+        </div>
+        <div class = "col-sm-4 text-center">
+            <h2>Breadboard Diagram</h2>
+            <img src = "images/prototyping/breadboard-diagram.png">
+            <caption>Note: encoders not present</caption>
+        
+        </div>
+        
+    </div>
 </div>  
+<div class="jumbotron text-left" style="padding-left:20px">
+    <h2>Version 2 (4/17-)</h2>
+</div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-sm-12">
+            <h2>Main Goals</h2>
+            <ul>
+                <li>Reload system - I am currently deciding whether to try a system in which the skittles are stored inside the arm and one in which the arm passes through a reload station, which uses a rack and pinion to deliver candy into the container.</li>
+                <li>Faster servo - the slow SG-90 causes some inaccuracies in launching (possibly spring loading the SG-90)</li>
+                <li>Larger camera range - currently the camera can see 54 degrees. This is very low and it cannot make use of it's (nearly) 360 degrees of launching capabilities. This could either be done with a servo or a fisheye lens. Both of these cause distortions that would have to be accounted for in the program.</li>
+            </ul>
+            <h2>Possible Supplemental Goals</h2>
+            <ul>
+                <li>Save video - save video of the launches</li>
+                <li>Increase launchable radius - the skittle launcher, at a maximum, can only launch a skittle about a meter until it hits the ground. By angling it (variably) with a (servo) motor, a nearly 1.43 meter radius would be possible.</li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
