@@ -1,4 +1,4 @@
-# skittle-launcher
+# Skittle Launcher
 This skittle launcher launches skittles using a centrifugal launcher. It is controlled by a Raspberry Pi and there is a camera to track people and create launch angles.
 
 Youtube video link: https://www.youtube.com/watch?v=8VnXftiHvKQ
