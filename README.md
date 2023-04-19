@@ -17,3 +17,5 @@ Slip Ring Mount (PC 3DP),
 Candy Holder (PLA+ 3DP),
 Base (PETG 3DP),
 Suction Cups 
+## Details
+300-450 RPM, 4 meter launch radius, CV read rate ~ 30 / min, accuracy (within 15 deg): 65%
